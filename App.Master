@@ -1,0 +1,290 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="App.master.cs" Inherits="DiuAcsCnt.App" %>
+
+<!DOCTYPE html>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>DIU Access Control</title>
+    <link href="/Content/appsite/css/AlertBox.css" rel="stylesheet" />
+
+    <link href="/Content/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/Content/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="/Content/Ionicons/css/ionicons.min.css" rel="stylesheet" />
+
+    <link href="/Content/appsite/css/skins/skin-purple.min.css" rel="stylesheet" />
+    <link href="/Content/bootstrap-datepicker/css/bootstrap-datepicker.min.css" rel="stylesheet" />
+    <link href="/Content/morris.js/morris.css" rel="stylesheet" />
+    <link href="/Content/plugins/iCheck/flat/_all.css" rel="stylesheet" />
+    <%--    <link href="/Content/plugins/datatable/css/dataTables.bootstrap.min.css" rel="stylesheet" />--%>
+    <link href="/Content/select2/css/select2.min.css" rel="stylesheet" />
+    <link href="/Content/appsite/css/AdminLTE.min.css" rel="stylesheet" />
+    <link type="text/css" rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css" />
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+
+    <link href="/Content/toast/jquery.toast.min.css" rel="stylesheet" />
+    <link href="Content/site.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="headPlaceHolder" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body class="hold-transition skin-purple sidebar-mini">
+    <form id="form1" runat="server">
+        <asp:ScriptManager ID="ScriptManager1" runat="server">
+        </asp:ScriptManager>
+        <div class="wrapper">
+            <header class="main-header">
+
+                <a href="/Default.aspx" class="logo">
+
+                    <img height="40" width="40" src="/image/daffodil_logo.png" alt="Logo" />
+                </a>
+
+                <nav class="navbar navbar-static-top">
+                    <!-- Sidebar toggle button-->
+                    <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+                        <span class="sr-only">Toggle navigation</span>
+                    </a>
+
+                    <div class="navbar-custom-menu">
+                        <ul class="nav navbar-nav">
+
+                            <%--<li class="dropdown notifications-menu">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                    <i class="fa fa-bell-o"></i>
+                                    <span class="label label-warning">10</span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li class="header">You have 10 notifications</li>
+                                    <li>
+                                        <!-- inner menu: contains the actual data -->
+                                        <ul class="menu">
+                                            <li>
+                                                <a href="#">
+                                                    <i class="fa fa-users text-aqua"></i>5 new members joined today
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <i class="fa fa-warning text-yellow"></i>Very long description here that may not fit into the
+                      page and may cause design problems
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <i class="fa fa-users text-red"></i>5 new members joined
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <i class="fa fa-shopping-cart text-green"></i>25 sales made
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <i class="fa fa-user text-red"></i>You changed your username
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="footer"><a href="#">View all</a></li>
+                                </ul>
+                            </li>--%>
+
+                            <li class="dropdown user user-menu">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                    <%-- <img src="/Content/appsite/img/user2-160x160.jpg" class="user-image" alt="User Image">--%>
+                                    <span class="hidden-xs">
+                                        <asp:Label ID="lblUserNameTop" runat="server" Text=""></asp:Label></span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <!-- User image -->
+                                    <li class="user-header">
+                                        <img src="/image/daffodil_logo.png" class="img-circle" alt="User Image" />
+
+                                        <p>
+                                            Diu Access Controller
+                 
+                                       <%-- <small>Member since Nov. 2012</small>--%>
+                                        </p>
+                                    </li>
+
+                                    <li class="user-footer">
+                                        <%--<div class="pull-left">
+                                            <a href="/ui/user/userProfile.aspx" class="btn btn-default btn-flat"><i class="fa fa-user"></i>Profile</a>
+                                        </div>--%>
+                                        <div class="pull-left">
+                                            <a href="/logout.aspx" class="btn btn-default btn-flat">Sign out</a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+
+                        </ul>
+                    </div>
+                </nav>
+            </header>
+            <aside class="main-sidebar">
+                <!-- sidebar: style can be found in sidebar.less -->
+                <section class="sidebar">
+                    <!-- Sidebar user panel -->
+                    <%-- <div class="user-panel">
+                        <div class="pull-left image">
+                            <img src="/content/appsite/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+                        </div>
+                        <div class="pull-left info">
+                            <p>
+                                <asp:Label ID="lblUserName" runat="server" Text="Label"></asp:Label>
+                            </p>
+                            <a href="#"><i class="fa fa-circle text-success"></i>Online</a>
+                        </div>
+                    </div>--%>
+                    <!-- search form -->
+                    <%--  <div class="sidebar-form">
+                        <div class="input-group">
+                            <input type="text" name="q" class="form-control" placeholder="Search...">
+                            <span class="input-group-btn">
+                                <button type="submit" name="search" id="search-btn" class="btn btn-flat">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                            </span>
+                        </div>
+                    </div>--%>
+                    <!-- /.search form -->
+                    <!-- sidebar menu: : style can be found in sidebar.less -->
+                    <ul class="sidebar-menu" data-widget="tree">
+                        <%--<li class="header">MAIN NAVIGATION</li>--%>
+                        <li>
+                            <a href="/Default.aspx">
+                                <i class="fa fa-dashboard"></i><span>Dashboard</span>
+                                <%-- <span class="pull-right-container">
+                                    <i class="fa fa-angle-left pull-right"></i>
+                                </span>--%>
+                            </a>
+                            <%-- <ul class="treeview-menu">
+                                <li class="active"><a href="index.html"><i class="fa fa-circle-o"></i>Dashboard v1</a></li>
+                                <li><a href="index2.html"><i class="fa fa-circle-o"></i>Dashboard v2</a></li>
+                            </ul>--%>
+                        </li>
+                        <li>
+                            <a href="/ui/devices.aspx">
+                                <i class="fa fa-desktop"></i><span>Device Manage</span>
+
+                            </a>
+
+                        </li>
+                        <li>
+                            <a href="/ui/AccessZone.aspx">
+                                <i class="fa fa-map-marker"></i><span>AccessZone Mapping</span>
+
+                            </a>
+
+                        </li>
+                        <li>
+                            <a href="/ui/studentInfo.aspx">
+                                <i class="fa fa-user"></i><span>Student Management</span>
+
+                            </a>
+
+                        </li>
+                        <li>
+                            <a href="/ui/accessLog.aspx">
+                                <i class="fa fa-clock-o"></i><span>AccessLog</span>
+
+                            </a>
+
+                        </li>
+                        <li>
+                            <a href="/ui/AccessManage.aspx">
+                                <i class="fa fa-user-circle"></i><span>AccessManage</span>
+
+                            </a>
+
+                        </li>
+                        <%--<asp:Repeater ID="ParentLevelMenuRepeater" runat="server" OnItemDataBound="ParentLevelMenuRepeater_ItemDataBound">
+                            <ItemTemplate>
+                                <li class="treeview"><a href="<%# Eval("URL")%>"><i class="<%# Eval("ImageURL")%>"></i><span>
+                                    <%# Eval("DisplayName")%>
+                                </span><span class="pull-right-container">
+                                    <i class="fa fa-angle-left pull-right"></i>
+                                </span></a>
+                                    
+                                        <asp:Repeater ID="ChildLevelMenuRepeater" runat="server">
+                                            <HeaderTemplate>
+                                              <ul class="treeview-menu">
+                                            </HeaderTemplate>
+                                            <ItemTemplate>
+
+                                                <li><a href="<%# Eval("URL")%>"><i class="<%# Eval("ImageURL")%>"></i>
+                                                    <%# Eval("DisplayName")%>
+                                                </a></li>
+
+                                            </ItemTemplate>
+                                            <FooterTemplate>
+                                                </ul>
+                                            </FooterTemplate>
+                                        </asp:Repeater>
+                              
+                                </li>
+                            </ItemTemplate>
+                        </asp:Repeater>--%>
+                    </ul>
+                </section>
+                <!-- /.sidebar -->
+            </aside>
+
+            <div class="content-wrapper">
+
+
+                <asp:ContentPlaceHolder ID="bodyPlaceHolder" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+        </div>
+        <script src="/Content/jquery/jquery.min.js" type="text/javascript"></script>
+        <script src="/Content/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+        <script src="/Content/morris.js/morris.min.js" type="text/javascript"></script>
+        <script src="/Content/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
+        <script src="/Content/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+        <script src="/Content/plugins/iCheck/icheck.min.js"></script>
+        <script src="/Content/plugins/datatable/js/jquery.dataTables.min.js"></script>
+        <%-- <script src="/Content/plugins/datatable/js/dataTables.bootstrap.min.js" type="text/javascript"></script>--%>
+        <script src="/Content/appsite/js/adminlte.min.js" type="text/javascript"></script>
+        <script src="/Content/select2/js/select2.full.min.js"></script>
+        <script src="/Script/JSLib.js"></script>
+        <script src="/Content/toast/jquery.toast.min.js"></script>
+        <script src="/Content/toast/toasthandle.js"></script>
+        <%-- <script src="/Scripts/bootbox.min.js"></script>--%>
+        <script src="/Scripts/underscore.min.js"></script>
+        <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
+        <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
+        <script type="text/x-template" id="package-temp">
+        </script>
+        <%--  <script>
+            $(".DataTable").DataTable();
+        </script>--%>
+        <%--  </script>--%>
+        <script>
+            $(document).ready(function () {
+                $("#DeviceListGridView").DataTable();
+
+
+
+            })
+
+            //$('#DeviceListGridView').DataTable({
+            //    'paging': true,
+            //    'lengthChange': true,
+            //    'searching': true,
+            //    'ordering': true,
+            //    'info': true,
+            //    'autoWidth': true
+            //})
+        </script>
+
+        <asp:ContentPlaceHolder ID="scriptPlaceHolder" runat="server">
+        </asp:ContentPlaceHolder>
+
+    </form>
+</body>
+</html>

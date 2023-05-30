@@ -1,0 +1,14 @@
+﻿
+.input-group .form-control {
+    z-index: 0;
+}
+
+.input-group .form-control:focus {
+    z-index: 0;
+}
+label {
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 5px;
+    font-weight: 500!important;
+}

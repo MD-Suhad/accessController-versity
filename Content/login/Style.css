@@ -1,0 +1,361 @@
+﻿html {
+    background: url('https://daffodilvarsity.edu.bd/template/images/social-share/diu-feature.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    z-index: 10;
+}
+
+body {
+    background: url("https://daffodilvarsity.edu.bd/template/images/social-share/diu-feature.jpg");
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    z-index: 10;
+}
+
+a {
+    color: #2f2f2f;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(9, 61, 90, 0.9);
+    z-index: 10;
+}
+
+.modal {
+    width: 50%;
+    /*margin-left: -350px;*/
+    background-color: rgba(9, 61, 90, 0.9);
+    border-radius: 15px;
+    z-index: 10;
+}
+
+.close {
+    font-size: 16px;
+    font-weight: 100;
+    color: #D3D3D3;
+    float: right;
+    border: none;
+    margin-right: 5px;
+    background-color: #fff;
+    outline: none;
+}
+
+
+Left side content .logo {
+    width: 150px;
+    margin-top: 105px;
+    margin-left: 25px;
+}
+
+.login-text {
+    width: 250px;
+    margin-top: 50px;
+}
+
+.flat-button {
+    color: blueviolet;
+    text-transform: uppercase;
+    font-weight: 100;
+    font-size: 13px;
+    border: none;
+}
+
+.facebook {
+    background: url('#'), #3b5998;
+    background-size: 20px 20px, cover;
+    background-position: 10px center, center center;
+    background-repeat: no-repeat;
+    margin-top: 50px;
+    padding: 15px 30px 15px 45px;
+}
+
+.brand {
+    margin-left: 25px;
+}
+
+
+Right-side .form {
+    width: 400px;
+    background-color: #fff;
+    margin-left: -50px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    z-indez: 5;
+}
+
+.form-inner {
+    padding: 50px;
+}
+
+
+Tabs .tabs {
+    width: 100%;
+    margin-top: 25px;
+}
+
+ul.tabs {
+    color: white;
+    font-size: medium;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border-bottom: solid 1px #d8d8d8;
+}
+
+
+
+
+    ul.tabs li {
+        display: inline-block;
+        width: 138px;
+        padding: 15px;
+        text-align: center;
+        text-transform: uppercase;
+        cursor: pointer;
+    }
+
+        ul.tabs li.current {
+            font-weight: 500;
+            box-shadow: inset 0 -3px 0 0 rgba(50, 117, 193, 1);
+            -webkit-box-shadow: inset 0 -3px 0 0 rgba(50, 117, 193, 1);
+            -moz-box-shadow: inset 0 -3px 0 0 rgba(50, 117, 193, 1);
+        }
+
+.form-content {
+    display: none;
+}
+
+    .form-content.current {
+        display: inherit;
+    }
+
+.field {
+    width: 295px;
+    margin-top: 15px;
+    padding: 12px 15px 12px 30px;
+    font-size: 14px;
+    font-weight: 100;
+    line-height: 22px;
+    border: 1px solid #d8d8d8;
+}
+
+
+Custom checkbox .check {
+    opacity: 0;
+    position: absolute;
+}
+
+.check .check-label {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.check-label {
+    position: relative;
+}
+
+.check + .check-label:before {
+    content: '';
+    background: #fff;
+    border: 1px solid #c3c3c3;
+    display: inline-block;
+    vertical-align: middle;
+    width: 10px;
+    height: 10px;
+    padding: 2px;
+    font-size: 12px;
+    margin-right: 10px;
+    text-align: center;
+}
+
+.check:checked + .check-label:before {
+    content: "\f00c";
+    font-family: 'FontAwesome';
+    background: #fff;
+    color: #2f2f2f;
+}
+
+.secondary-text,
+.secondary-text a {
+    color: #939393;
+}
+
+    .secondary-text a:hover {
+        color: #3275C1;
+    }
+
+.forgot {
+    float: right;
+}
+
+.promo {
+    font-size: 10px;
+}
+
+.position {
+    height: 396px;
+    position: fixed;
+    top: 60%;
+    left: 25%;
+    margin-top: -240px;
+}
+
+.clear {
+    height: 15px;
+}
+
+input:first-of-type {
+    margin-top: 40px;
+}
+
+.signin {
+    background-color: rgb(255, 183, 0);
+    padding: 15px;
+    width: 50%;
+    color: #fff;
+    margin-top: 30px;
+}
+
+
+No support for IE9, default to standard .field::-webkit-input-placeholder {
+    color: #2f2f2f;
+}
+
+.field:-moz-placeholder {
+    color: #2f2f2f;
+    opacity: 1;
+}
+
+.field::-moz-placeholder {
+    color: #2f2f2f;
+    opacity: 1;
+}
+
+.field:-ms-input-placeholder {
+    color: #2f2f2f;
+}
+
+.field:placeholder-shown {
+    color: #2f2f2f;
+}
+
+input:focus,
+.check:focus {
+    outline: none;
+    outline: 2px solid #3275C1;
+    border-radius: 5px;
+}
+
+
+
+
+
+ul.single-tab li {
+    display: inline-block;
+    width: 100%;
+    padding: 15px;
+    text-align: center;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.align-center {
+    text-align: center;
+}
+
+.center {
+    margin: auto;
+    width: 60%;
+    padding: 10px;
+}
+
+.center-75 {
+    width: 75%;
+    margin: auto;
+}
+
+.center-80 {
+    width: 80%;
+    margin: auto;
+}
+
+.center-90 {
+    width: 90%;
+    margin: auto;
+}
+
+.center-25 {
+    width: 25%;
+    margin: auto;
+}
+
+.userbox {
+    opacity: 5;
+}
+
+.forgot-pass-tab {
+    opacity: 1;
+}
+
+.login-tabs {
+    opacity: 1;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.verySection {
+    opacity: 1;
+}
+
+
+
+
+
+
+
+
+
+
+/*body{
+    margin:0;
+    padding:0;
+    background:url("https://daffodilvarsity.edu.bd/template/images/social-share/diu-feature.jpg");
+    background-size:cover;
+    background-position:center;
+    background-color:blanchedalmond;
+    font-family:sans-serif;
+}*/
+/*.login-box{
+    width:320px;
+    height:420px;
+    background:#000;
+    color:#fff;
+    top:50%;
+    left:50%;
+    position:absolute;
+    transform:translate(-50%,-50%);
+    box-sizing:border-box;
+}
+.avatar{
+    width:100px;
+    height:100px;
+    border-radius:50%;
+
+}
